@@ -1,0 +1,219 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600&family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400&display=swap');
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    min-height: 100vh;
+    background: #17151a;
+    color: #d8c9b7;
+    font-family: 'Cormorant Garamond', serif;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    overflow: hidden;
+}
+
+/* INICIO DE SESIÓN */
+
+.login {
+    width: 90%;
+    max-width: 420px;
+    padding: 45px 35px;
+
+    background: #211d20;
+    border: 1px solid #51443d;
+    border-radius: 8px;
+
+    text-align: center;
+    box-shadow: 0 0 35px #00000055;
+
+    position: relative;
+    z-index: 1;
+}
+
+h1 {
+    font-family: 'Cinzel', serif;
+    font-size: 27px;
+    font-weight: 400;
+    color: #ddc9ae;
+    letter-spacing: 2px;
+}
+
+.login > p {
+    font-size: 19px;
+    color: #b9a995;
+    margin-bottom: 35px;
+}
+
+label {
+    display: block;
+    text-align: left;
+    margin: 18px 0 7px;
+
+    font-size: 18px;
+    color: #cbb9a3;
+}
+
+input {
+    width: 100%;
+    padding: 13px;
+
+    background: #30292a;
+    border: 1px solid #625149;
+    border-radius: 4px;
+
+    color: #eee0cf;
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 18px;
+
+    outline: none;
+}
+
+input:focus {
+    border-color: #b49a7b;
+    box-shadow: 0 0 10px #b49a7b33;
+}
+
+button {
+    margin-top: 28px;
+    padding: 12px 35px;
+
+    background: #74604f;
+    border: 1px solid #a48a70;
+    border-radius: 4px;
+
+    color: #f0e4d4;
+    font-family: 'Cinzel', serif;
+    letter-spacing: 1px;
+    font-size: 14px;
+
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+button:hover {
+    background: #92765f;
+    box-shadow: 0 0 15px #b49a7b44;
+}
+
+#mensaje {
+    color: #d4a49a;
+    font-size: 17px;
+    margin-bottom: 0;
+}
+
+/* ESTRELLITAS */
+
+.estrella {
+    position: fixed;
+    color: #b9a995;
+    opacity: 0.5;
+    pointer-events: none;
+    animation: brillar 3s infinite alternate;
+}
+
+@keyframes brillar {
+    from {
+        opacity: 0.2;
+        transform: scale(0.7);
+    }
+
+    to {
+        opacity: 0.8;
+        transform: scale(1.2);
+    }
+}
+
+/* PÁGINAS DE LAS CARTAS */
+
+.pagina-carta {
+    min-height: 100vh;
+    padding: 55px 20px;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    overflow-x: hidden;
+    overflow-y: auto;
+    background:
+        radial-gradient(ellipse at 50% 40%, #332a2a 0%, #17151a 75%);
+}
+
+/* CONTENEDOR */
+
+.carta-container {
+    width: 100%;
+    max-width: 780px;
+    position: relative;
+    z-index: 1;
+    margin: auto;
+}
+
+.carta-container h1 {
+    text-align: center;
+    margin-bottom: 35px;
+    font-size: 30px;
+}
+
+/* HOJA DE PAPEL */
+
+.papel {
+    width: 100%;
+    padding: 55px 65px;
+
+    background:
+        radial-gradient(ellipse at top left, #eee0c9, transparent 60%),
+        linear-gradient(135deg, #d9c6a9, #e8d9c2 45%, #d5bea0);
+
+    color: #40352f;
+
+    border: 1px solid #b9a184;
+    border-radius: 3px;
+
+    box-shadow:
+        0 15px 45px #00000066,
+        inset 0 0 35px #987d5a33;
+
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 21px;
+    line-height: 1.9;
+    text-align: left;
+}
+
+.papel p {
+    margin-bottom: 22px;
+}
+
+.saludo {
+    font-size: 25px;
+    font-style: italic;
+}
+
+.firma {
+    text-align: right;
+    margin-top: 45px;
+    font-style: italic;
+}
+
+/* ADAPTACIÓN A CELULARES */
+
+@media (max-width: 600px) {
+
+    .pagina-carta {
+        padding: 30px 14px;
+    }
+
+    .papel {
+        padding: 30px 24px;
+        font-size: 19px;
+    }
+
+    .carta-container h1 {
+        font-size: 24px;
+    }
+}
